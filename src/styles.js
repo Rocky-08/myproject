@@ -12,9 +12,10 @@ const useStyles = makeStyles((theme) => ({
   },
   cardMedia: {
     paddingTop: "56.25%",
-    cusror: "initial",
   },
-
+  cardMedias: {
+    paddingTop: "150%",
+  },
   FindDiv: {
     padding: "3rem",
 

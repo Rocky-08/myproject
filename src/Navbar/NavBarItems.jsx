@@ -55,14 +55,24 @@ const NavBarItems = (prop) => {
                 <Link style={{ color: "black", textDecoration: "none" }} to="/">
                   <Tab value="0" label="Home" />
                 </Link>
-                <Tab value="1" label="About Us" />
+                <Link
+                  style={{ color: "black", textDecoration: "none" }}
+                  to="/aboutUs"
+                >
+                  <Tab value="1" label="About Us" />
+                </Link>
                 <Link
                   to="/contactUs"
                   style={{ color: "black", textDecoration: "none" }}
                 >
                   <Tab value="2" label="Contact Us" />
                 </Link>
-                <Tab value="3" label="Policy" />
+                <Link
+                  to="/policy"
+                  style={{ color: "black", textDecoration: "none" }}
+                >
+                  <Tab value="3" label="Policy" />
+                </Link>
               </Tabs>
 
               <Link

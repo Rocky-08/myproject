@@ -13,7 +13,6 @@ const ContactTextField = (prop) => {
         label={prop.label}
         name={prop.name}
         autoComplete={prop.auto}
-        autoFocus
       />
     </>
   );

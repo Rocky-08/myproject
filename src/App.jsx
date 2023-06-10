@@ -9,11 +9,12 @@ import SignUp from "./SignUp/SignUp";
 import LoginPage from "./Login/LoginPage";
 import FilterFeature from "./Display cards/FilterFeature";
 import Policy from "./Policy/Policy";
+import About from "./About/About";
 
 const App = () => {
   return (
     <>
-      <Router>
+      <Router style={{ margin: "0", padding: "0" }}>
         <Navbar />
 
         <Routes>
@@ -22,7 +23,8 @@ const App = () => {
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/cards/:name" element={<FilterFeature />} />
-          <Route path="policy" element={<Policy />} />
+          <Route path="/policy" element={<Policy />} />
+          <Route path="/aboutUs" element={<About />} />
         </Routes>
       </Router>
     </>
