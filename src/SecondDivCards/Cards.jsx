@@ -20,7 +20,7 @@ const Cards = (prop) => {
         {CardsData.map((page, index) => (
           <Grid item xs={12} sm={6} md={4} onClick={prop.openCard}>
             <Link
-              to={`/cards/${page.CollegeName}`}
+              to={`/cards/${page.CollegeName}/${page.CollegeCity}`}
               style={{ textDecoration: "none", color: "black" }}
             >
               <CardActionArea>

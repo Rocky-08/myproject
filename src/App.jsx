@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./Navbar/NavBar";
 import MainPage from "./MainPage";
 import Contact from "./Contact Us/Contact";
@@ -12,21 +17,24 @@ import Policy from "./Policy/Policy";
 import About from "./About/About";
 
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
   return (
     <>
-      <Router style={{ margin: "0", padding: "0" }}>
-        <Navbar />
+      <Navbar />
 
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/contactUs" element={<Contact />} />
-          <Route path="/signUp" element={<SignUp />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/cards/:name" element={<FilterFeature />} />
-          <Route path="/policy" element={<Policy />} />
-          <Route path="/aboutUs" element={<About />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/contactUs" element={<Contact />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/cards/:name/:city/" element={<FilterFeature />} />
+        <Route path="/policy" element={<Policy />} />
+        <Route path="/aboutUs" element={<About />} />
+      </Routes>
     </>
   );
 };

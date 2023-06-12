@@ -49,7 +49,6 @@ const Members = () => {
   const classes = useStyles();
   return (
     <>
-      {" "}
       <Typography
         variant="h4"
         style={{ marginBottom: "2rem", fontWeight: "bold" }}
